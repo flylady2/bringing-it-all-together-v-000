@@ -40,7 +40,6 @@ class Dog
     if self.id
       self.update
     else
-      #new_dog = Dog.new
       sql = <<-SQL
       INSERT INTO dogs(name, breed)
       VALUES(?, ?)
@@ -54,7 +53,6 @@ class Dog
   def self.create(name:, breed:)
     dog = Dog.new(name: name, breed: breed)
     dog.save
-    #binding.pry
   end
 
 
